@@ -1,0 +1,127 @@
+<html>
+<head>
+  <title>Admin Login</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #adb5bd;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .login-card {
+      background-color: rgba(26, 26, 46, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      animation: fadeIn 1s ease;
+    }
+
+    .login-card h3 {
+      font-weight: 700;
+      color: #f9c74f;
+    }
+
+    .button {
+      background-color: #f9c74f;
+      color: #1a1a2e;
+      border: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ffd166;
+      transform: translateY(-2px);
+    }
+
+    a{
+      color: #f9c74f;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f9c74f;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: #adb5bd;
+    }
+
+    .alert {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card text-center">
+    <div class="mb-3 logo">SafeVault</div>
+    <h3 class="mb-3">Admin Login</h3>
+
+    <form id="adminLoginForm">
+      <div class="mb-3 text-start">
+        <label for="username" class="form-label fw-semibold text-light">Admin Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter admin username" required>
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="password" class="form-label fw-semibold text-light">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+      </div>
+
+      <button type="submit" class="btn button w-100 py-2 mt-2">Login</button>
+
+      <div id="alertBox" class="alert mt-3" role="alert"></div>
+
+      <div class="mt-3">
+        <a href="forgot-password.html">Forgot Password?</a>
+      </div>
+
+      <div class="mt-3">
+        <p class="footer-text">Return to <a href="project.html">Home</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("adminLoginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const alertBox = document.getElementById("alertBox");
+
+      if (username === "admin" && password === "1234") {
+        alertBox.className = "alert alert-success";
+        alertBox.textContent = "Login successfully";
+        alertBox.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "admin-dashboard.html";
+        }, 1500);
+      } else {
+        alertBox.className = "alert alert-danger";
+        alertBox.textContent = "Invalid username or password!";
+        alertBox.style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

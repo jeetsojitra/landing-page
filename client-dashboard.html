@@ -1,0 +1,180 @@
+<html>
+<head>
+  <title>Client Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      height: 100vh;
+      background-color: #16213e;
+      color: white;
+      position: fixed;
+      width: 240px;
+      padding-top: 25px;
+    }
+
+    .sidebar h3 {
+      text-align: center;
+      color: #00b4d8;
+      font-weight: 700;
+    }
+
+    .sidebar a {
+      color: #ddd;
+      text-decoration: none;
+      display: block;
+      padding: 12px 20px;
+      margin: 6px 0;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover  {
+      background-color: #1a2b4d;
+      color: #00b4d8;
+      border-radius: 5px;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header h4 {
+      margin: 0;
+      font-weight: 600;
+      color: #16213e;
+    }
+
+    .logout {
+      background-color: #00b4d8;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .logout:hover {
+      background-color: #0096c7;
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h5 {
+      font-weight: 600;
+    }
+
+    .table thead {
+      background-color: #00b4d8;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h3>SafeVault</h3>
+    <a href="client-dashboard.html" class="active">Dashboard</a>
+    <a href="client-setting.html">Account Settings</a>
+    <a href="client-support.html">Support</a>
+    <a href="project.html">Back to Home</a>
+  </div>
+
+  <div class="content">
+    <div class="header mb-4">
+      <h3>Welcome</h3>
+      <button class="logout">Logout</button>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-4 mb-3">
+        <div class="card p-3">
+          <h5>Stored Files</h5>
+          <p class="fs-4 fw-bold text-primary">128</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3">
+          <h5>Storage Used</h5>
+          <p class="fs-4 fw-bold text-success">3.2 GB / 10 GB</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3">
+          <h5>Last Backup</h5>
+          <p class="fs-5 fw-semibold text-warning">2 days ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-3 mb-4">
+      <h5 class="mb-3">Recent Activity</h5>
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Action</th>
+              <th>File Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>27 Oct 2025</td>
+              <td>Uploaded</td>
+              <td>ProjectPlan.pdf</td>
+              <td><span>Success</span></td>
+            </tr>
+            <tr>
+              <td>25 Oct 2025</td>
+              <td>Deleted</td>
+              <td>OldData.zip</td>
+              <td><span>Removed</span></td>
+            </tr>
+            <tr>
+              <td>24 Oct 2025</td>
+              <td>Backup</td>
+              <td>Documents</td>
+              <td><span>Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card p-4">
+      <h5>Account Summary</h5>
+      <ul class="list-unstyled mt-3">
+        <li><strong>Email:</strong> jeet1612@gmail.com.com</li>
+        <li><strong>Member Since:</strong> January 2024</li>
+        <li><strong>Status:</strong> Active</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
